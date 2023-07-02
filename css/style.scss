@@ -1,0 +1,77 @@
+@charset "utf-8";
+// 컬러 팔레트
+$bg-color:#222;
+$white-color : #fff;
+
+
+body{background: $bg-color; color: $white-color;}
+
+
+
+// 헤더
+
+
+
+#main{width: 100%; height: 100%}
+// 섹션1
+#section1{width: 100%; height: 100%;
+    >div{position: relative; width: 100%; height: 100%;
+        .m-video{position: relative; 
+            width: 100%; height: 100vh; overflow: hidden; z-index: 1;
+            #mainVideo{width: 100%; height: 100%; object-fit: cover;}
+            }
+        }
+    }
+
+// 섹션2
+#section2{width: 100%; height: 100%;
+    #header{
+        position: absolute;
+        top:100%;
+        left:0%;
+        width: 100%;
+        height: 82px; 
+        background: rgba(255,255,255,0);
+        z-index: 3;
+        div{
+            width: 100%;
+            max-width: 1090px;
+            margin: 0 auto;
+            .header-logoNav{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                h1{ 
+                    a{color: #fff ;
+                        img{/* 로고이미지 */filter:  invert(1%);}
+                    }
+                }
+                nav{
+                   span{
+                        display: inline-block;
+                        margin-left: 20px;
+                        a{
+                            color : $white-color ;
+                            display: block;
+                            font-size: 16px;
+                            border-bottom: 1px solid rgba(255,255,255,0);
+                            transition: .3s;
+                            &:hover{
+                                border-bottom: 1px solid rgba(255,255,255,.6);
+                            }
+                            &.addMainBt{border-bottom: 1px solid rgba(255,255,255,.6);}
+                            i{display: block;  font-size: 24px;}
+                        }
+                   } 
+                }
+            }
+        }
+        
+    }    
+    >div{width: 100%; height: 100%; background: url(../img/section2_back.jpg); background-size: cover;
+
+        }
+    }
+
+
