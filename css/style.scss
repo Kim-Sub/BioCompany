@@ -1,4 +1,7 @@
 @charset "utf-8";
+// 폰트 IBM Plex Sans KR // font-family: 'IBM Plex Sans KR', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@600&display=swap');
+
 // 컬러 팔레트
 $bg-color:#222;
 $white-color : #fff;
@@ -29,7 +32,7 @@ body{background: $bg-color; color: $white-color;}
                     width: 100px; height: 4px; background: rgba(255,255,255,0.3)}
                 &::after{   content: ""; // 무빙바
                     position: absolute; left: 0px; bottom: -2px;
-                    width: 50px; height: 4px; background: #80C41C;
+                    width: 50px; height: 4px; background: #ffffff;
                     animation: scroll-down infinite alternate linear; animation-duration: 1s;
                     @keyframes scroll-down {
                         from { transform: translateX(0px); }
@@ -66,11 +69,33 @@ body{background: $bg-color; color: $white-color;}
                    } 
                 }
             }
-            .videobox{display: flex; justify-content: center; align-items: center; height: 1000px;
-                #subVideo{}
+            .videobox{
+                display: flex; flex-direction: column;
+                justify-content: center; align-items: center; height: 1000px;
+                // 타이핑js
+                .type{height: 50px; margin-top: 10px; font-size: 16px;}
+                .typed-cursor{display: none;}
+            }
+            .textbox{  // OUR PASSION
+                font-family: 'IBM Plex Sans KR', sans-serif; font-size: 50px; font-weight: 600;
+                position: absolute; top: 20%; left: 15% ;z-index: 1;
+                p{
+                    font-size: 140px; font-style: italic; font-weight: 1500; letter-spacing: -17px;
+                    opacity: .6; color: #225322bd;
+                    color: transparent; animation: colorFade 5s forwards; animation-play-state: paused; 
+                    @keyframes colorFade {
+                        from {color: #225322bd;}
+                        to {color: white;}}
+                    &:hover{
+                        animation-play-state: running;
+                    }
+
+                }
             }
         }  
     }    
 }
+
+
 
 

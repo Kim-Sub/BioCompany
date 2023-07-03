@@ -7,6 +7,7 @@
 <!-- 구글폰트아이콘 --><link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0' />
 <!-- 폰트어썸 --><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
 <!-- 제이쿼리cdn --><script src='https://code.jquery.com/jquery-3.7.0.min.js' crossorigin='anonymous'></script>
+<!-- 타이핑js --><script src='./js/typed.js'></script>
     <script src='./js/script.js' defer></script>
     <link rel='stylesheet' href='./css/reset.css'/>
     <link rel='stylesheet' href='./css/style.css'/>
@@ -55,7 +56,20 @@
                         <video id="subVideo" autoplay muted loop width="1000px"> 
                             <source src="./video/main2.mp4" type="video/mp4">
                         </video>
+                        <div class="type"></div>
                     </div>
+                    <script>
+                        $('.type').typed({
+                            strings:['본연의 아름다움을 위한 끝없는 열정'],
+                            typeSpeed:100,
+                            backDelay:1000,
+                            loop:true
+                        })
+                    </script>
+                    <div class="textbox">
+                        <p>OUR PASSION</p>
+                    </div>
+                    
                 </div>  
             </header>
             <div>

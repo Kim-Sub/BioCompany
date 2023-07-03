@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@600&display=swap");
 body {
   background: #222;
   color: #fff;
@@ -61,7 +62,7 @@ body {
   bottom: -2px;
   width: 50px;
   height: 4px;
-  background: #80C41C;
+  background: #ffffff;
   animation: scroll-down infinite alternate linear;
   animation-duration: 1s;
 }
@@ -126,7 +127,47 @@ body {
 }
 #section2 #header > .container .videobox {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 1000px;
+}
+#section2 #header > .container .videobox .type {
+  height: 50px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+#section2 #header > .container .videobox .typed-cursor {
+  display: none;
+}
+#section2 #header > .container .textbox {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  z-index: 1;
+}
+#section2 #header > .container .textbox p {
+  font-size: 140px;
+  font-style: italic;
+  font-weight: 1500;
+  letter-spacing: -17px;
+  opacity: 0.6;
+  color: rgba(34, 83, 34, 0.7411764706);
+  color: transparent;
+  animation: colorFade 5s forwards;
+  animation-play-state: paused;
+}
+@keyframes colorFade {
+  from {
+    color: rgba(34, 83, 34, 0.7411764706);
+  }
+  to {
+    color: white;
+  }
+}
+#section2 #header > .container .textbox p:hover {
+  animation-play-state: running;
 }/*# sourceMappingURL=style.css.map */
