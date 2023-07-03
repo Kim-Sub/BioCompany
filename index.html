@@ -36,6 +36,19 @@
                 </ul>
             </div>
         </section>
+        <script>
+            window.addEventListener('scroll', function() {
+              var videoContainer = document.querySelector('.m-video');
+              var mainVideo = document.getElementById('mainVideo');
+              var scrollY = window.scrollY
+          
+              if (scrollY >= 550) {
+                mainVideo.classList.add('dark-video');
+              } else {
+                mainVideo.classList.remove('dark-video');
+              }
+            });
+          </script>
 
 
         <!-- 섹션2 회사 소개 -->
