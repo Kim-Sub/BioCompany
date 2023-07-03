@@ -36,7 +36,7 @@
                 </ul>
             </div>
         </section>
-        <script>
+        <script> // 550스크롤 도착시 영상 페이드
             window.addEventListener('scroll', function() {
               var videoContainer = document.querySelector('.m-video');
               var mainVideo = document.getElementById('mainVideo');
@@ -71,7 +71,7 @@
                         </video>
                         <div class="type"></div>
                     </div>
-                    <script>
+                    <script> // 타이핑 js
                         $('.type').typed({
                             strings:['본연의 아름다움을 위한 끝없는 열정'],
                             typeSpeed:100,
@@ -82,6 +82,47 @@
                     <div class="textbox">
                         <p>OUR PASSION</p>
                     </div>
+                    <div class="textbox textbox2">
+                        <p><span>WE  ARE  NVVIO</span></p>
+                    </div>
+                    <div id="introduce">
+                        <div>
+                            <h3>Nature Basic</h3>
+                            <i class="fab fa-pagelines"></i>
+                            #천연물 #단일추출물 #소재맞춤형 #항아리추출공법 #저온냉침추출법 #미생물 #자연발효 #효소
+                            <video autoplay muted loop > 
+                            <source src="./video/introduce1.mp4" type="video/mp4">
+                        </div>
+                        <div>
+                            <h3>NB Bio Lab</h3>
+                            <i class="fas fa-flask"></i>
+                            #독자적 #창의적 #혁신 #우수한효능 #바이오정수 #신원료 #지속적인개발 #청정농가 #지적재산권
+                            <video autoplay muted loop > 
+                            <source src="./video/introduce2.mp4" type="video/mp4">
+                        </div>
+                        <div>
+                            <h3>Journey Materials</h3>
+                            <i class="fas fa-globe-americas"></i>
+                            #같은식물 #다른효능 #햇빛 #바람 #토양 #표준화 #전문화 #다양화 #전세계 #허브 #다양한이야기
+                            <video autoplay muted loop > 
+                            <source src="./video/introduce3.mp4" type="video/mp4">
+                        </div>
+                    </div>
+                    <script> // 마우스 호버시 동영상 보이게
+                        const introduceDivs = document.querySelectorAll("#introduce > div");
+
+                        introduceDivs.forEach((div) => {
+                          const video = div.querySelector("video");
+                        
+                          div.addEventListener("mouseenter", () => {
+                            video.classList.add("active");
+                          });
+                      
+                          div.addEventListener("mouseleave", () => {
+                            video.classList.remove("active");
+                          });
+                        });
+                    </script>
                     
                 </div>  
             </header>
