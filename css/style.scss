@@ -191,7 +191,7 @@ body{background: $bg-color; color: $white-color; overflow-x: hidden; }
     }  
 }    
 // 1000 스크롤 도착시 섹션2 네비 메뉴 상단에 고정하는 코드 : 부득이하게 아래에 작성함
-.header-logoNav.sticky-fixed { // 위치조정 필요
-      position: fixed; top: 108%; left: 50% ; max-width: 1200px; margin: 0% auto;
+.header-logoNav.sticky-fixed { 
+      position: fixed; top: 108%; left: 18.7% !important ; max-width: 1200px; 
       } 
   

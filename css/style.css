@@ -319,7 +319,6 @@ body {
 .header-logoNav.sticky-fixed {
   position: fixed;
   top: 108%;
-  left: 50%;
+  left: 18.7% !important;
   max-width: 1200px;
-  margin: 0% auto;
 }/*# sourceMappingURL=style.css.map */
