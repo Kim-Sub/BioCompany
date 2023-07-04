@@ -134,31 +134,33 @@ body {
   margin: 2% auto;
   overflow: hidden;
 }
-#section2 #header > .container .header-logoNav {
+#section2 #header > .container .shell-height {
+  height: 60px;
+}
+#section2 #header > .container .shell-height .header-logoNav {
   width: 100%;
   z-index: 6;
   top: 3%;
   left: 0%;
-  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#section2 #header > .container .header-logoNav h1 a img { /* 로고이미지 */
+#section2 #header > .container .shell-height .header-logoNav h1 a img { /* 로고이미지 */
   filter: invert(1%);
 }
-#section2 #header > .container .header-logoNav nav span {
+#section2 #header > .container .shell-height .header-logoNav nav span {
   display: inline-block;
   margin-left: 20px;
 }
-#section2 #header > .container .header-logoNav nav span a {
+#section2 #header > .container .shell-height .header-logoNav nav span a {
   color: #fff;
   display: block;
   font-size: 18px;
   border-bottom: 1px solid rgba(255, 255, 255, 0);
   transition: 0.3s;
 }
-#section2 #header > .container .header-logoNav nav span a:hover {
+#section2 #header > .container .shell-height .header-logoNav nav span a:hover {
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 }
 #section2 #header > .container .videobox {
@@ -312,4 +314,12 @@ body {
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
   }
+}
+
+.header-logoNav.sticky-fixed {
+  position: fixed;
+  top: 108%;
+  left: 50%;
+  max-width: 1200px;
+  margin: 0% auto;
 }/*# sourceMappingURL=style.css.map */

@@ -29,6 +29,17 @@ introduceDivs.forEach((div) => {
   });
 });
 
+
+// 1000 스크롤 도착시 섹션2 네비 메뉴 고정
+$(window).scroll(function() {
+    if ($(window).scrollTop() >= 1000) {
+      $('.header-logoNav').addClass('sticky-fixed');
+    } else {
+      $('.header-logoNav').removeClass('sticky-fixed');
+    }
+  });
+
+
 // 1500 스크롤 도착시 #introduce opacity 변경
 window.addEventListener('scroll', function() {
     var introduce = document.getElementById('introduce'); // introduce 요소 선택
