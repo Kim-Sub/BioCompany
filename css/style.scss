@@ -140,7 +140,7 @@ body{background: $bg-color; color: $white-color;}
                     border: 1px solid $white-color; font-size: 15px; transition: 2s; position: relative;
                     h3{font-size: 30px;}
                     i{font-size: 30px; margin: 55px 0;}
-                    video{position: absolute; z-index: -1; width: 336px; height: 500px; filter: brightness(.6); display: none; transition: 1s;
+                    video{position: absolute; z-index: -1; width: 336px; height: 500px; filter: brightness(.6); display: none; transition: 1s;  object-fit: cover;
                         &.active{display: block}}
                 }
             }
