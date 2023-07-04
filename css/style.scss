@@ -133,20 +133,19 @@ body{background: $bg-color; color: $white-color; overflow-x: hidden; }
             }
             .textbox2{ // WE ARE NVVIO
                 top: 105%; left: 45%;
-                p{
-                    span{}
-                }
+
             }
             #introduce{display: flex; justify-content: space-around; opacity: 0; transition: 2s;
                 div{display: flex;  flex-direction: column; justify-content: center;
                     align-items: center; width: 28%; height: 500px; padding: 2%; box-sizing: border-box;
+                    
                     border: 1px solid $white-color; font-size: 15px; transition: 2s; position: relative;
                     h3{font-size: 30px;}
                     i{font-size: 30px; margin: 55px 0;}
                     video{position: absolute; z-index: -1; width: 100%; height: 100%; filter: brightness(.6); display: none; transition: 1s;  object-fit: cover;
                         &.active{display: block}}
                 }
-            }
+            } 
             .page-down{ // 페이지 다운 서클 버튼
                 width: 350px; height: 350px; border-radius: 50%; cursor: pointer; transition-duration: 0.8s; margin: 0 auto; position: relative; bottom: -6%;
                 .down-arrow{
@@ -164,24 +163,13 @@ body{background: $bg-color; color: $white-color; overflow-x: hidden; }
                         }
                     }
                     &::after{
-                        content: ""; position: absolute; width: 100%; height: 100%;
-                        display: block;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        background-image: url(../img/icon/scroll-Circle1.png); filter: invert(0%) ;
-                        background-repeat: no-repeat;
-                        background-size: cover;
+                        content: ""; position: absolute; width: 100%; height: 100%; display: block;
+                        top: 50%; left: 50%; transform: translate(-50%, -50%);
+                        background: url(../img/icon/scroll-Circle1.png) center/cover; opacity: .7;
                         animation: circleRotate 7s linear infinite;
-                        background-position: center;
-                        opacity: 0.7;
                         @keyframes circleRotate {
-                            0% {
-                                transform: translate(-50%, -50%) rotate(0)
-                            }
-                        
-                            100% {
-                                transform: translate(-50%, -50%) rotate(360deg)
+                            0% {transform: translate(-50%, -50%) rotate(0)}
+                            100% {transform: translate(-50%, -50%) rotate(360deg)
                             }
                         }
                     }
@@ -192,6 +180,27 @@ body{background: $bg-color; color: $white-color; overflow-x: hidden; }
 }    
 // 1000 스크롤 도착시 섹션2 네비 메뉴 상단에 고정하는 코드 : 부득이하게 아래에 작성함
 .header-logoNav.sticky-fixed { 
-      position: fixed; top: 108%; left: 18.7% !important ; max-width: 1200px; 
-      } 
-  
+    position: fixed; top: 108%; left: 18.7% !important ; max-width: 1200px; 
+    } 
+
+// 센션3
+#section3{width: 100%; height: 100%;; overflow: hidden;  display: none;
+        div{width: 100%; height: 100%; position: relative;
+            .videoBox{
+                opacity: 1; transition: 3s;
+                &.hidden {opacity: 0;
+                }
+                video{width: 100%; height: 100%; object-fit: cover; position: absolute;}
+            }
+            .contentBox{
+                width: 100%; height: 100%; position: relative;
+                .coverShape{
+                    position: absolute; top: 50%; left: 50%;
+                    transform: translate(-50%, -50%); perspective: 100px;
+                    .cover{width: 100%; height: 100%; background: url(../img/section2_back.jpg) no-repeat center center;  transform: translateZ(-1500px); border-radius: 100px; transition: .4s;
+                    &.add{height: 100%; border-radius: 0px; transform: translateZ(0px);  } }
+                }
+            }
+        }
+}
+

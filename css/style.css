@@ -299,13 +299,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url(../img/icon/scroll-Circle1.png);
-  filter: invert(0%);
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: circleRotate 7s linear infinite;
-  background-position: center;
+  background: url(../img/icon/scroll-Circle1.png) center/cover;
   opacity: 0.7;
+  animation: circleRotate 7s linear infinite;
 }
 @keyframes circleRotate {
   0% {
@@ -321,4 +317,55 @@ body {
   top: 108%;
   left: 18.7% !important;
   max-width: 1200px;
+}
+
+#section3 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: none;
+}
+#section3 div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#section3 div .videoBox {
+  opacity: 1;
+  transition: 3s;
+}
+#section3 div .videoBox.hidden {
+  opacity: 0;
+}
+#section3 div .videoBox video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+}
+#section3 div .contentBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#section3 div .contentBox .coverShape {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 100px;
+}
+#section3 div .contentBox .coverShape .cover {
+  width: 100%;
+  height: 100%;
+  background: url(../img/section2_back.jpg) no-repeat center center;
+  transform: translateZ(-1500px);
+  border-radius: 100px;
+  transition: 0.4s;
+}
+#section3 div .contentBox .coverShape .cover.add {
+  height: 100%;
+  border-radius: 0px;
+  transform: translateZ(0px);
 }/*# sourceMappingURL=style.css.map */
