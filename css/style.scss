@@ -134,11 +134,10 @@ body{background: $bg-color; color: $white-color;}
                     span{}
                 }
             }
-            #introduce{display: flex; justify-content: space-around;
+            #introduce{display: flex; justify-content: space-around; opacity: 0; transition: 2s;
                 div{display: flex;  flex-direction: column; justify-content: center;
                     align-items: center; width: 28%; height: 500px; padding: 2%; box-sizing: border-box;
-                    border: 1px solid $white-color; font-size: 15px;
-                    position: relative;
+                    border: 1px solid $white-color; font-size: 15px; transition: 2s; position: relative;
                     h3{font-size: 30px;}
                     i{font-size: 30px; margin: 55px 0;}
                     video{position: absolute; z-index: -1; width: 336px; height: 500px; filter: brightness(.6); display: none; transition: 1s;

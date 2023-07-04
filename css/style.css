@@ -211,6 +211,8 @@ body {
 #section2 #header > .container #introduce {
   display: flex;
   justify-content: space-around;
+  opacity: 0;
+  transition: 2s;
 }
 #section2 #header > .container #introduce div {
   display: flex;
@@ -223,6 +225,7 @@ body {
   box-sizing: border-box;
   border: 1px solid #fff;
   font-size: 15px;
+  transition: 2s;
   position: relative;
 }
 #section2 #header > .container #introduce div h3 {
