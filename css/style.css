@@ -3,9 +3,10 @@
 body {
   background: #222;
   color: #fff;
+  overflow-x: hidden;
 }
 
-/* y축(세로) 스크롤바 커스텀 */
+/* ★ y축(세로) 스크롤바 커스텀 */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -50,7 +51,7 @@ body {
 #section1 > div .m-video {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   z-index: -1;
 }
@@ -113,7 +114,7 @@ body {
 
 #section2 {
   width: 100%;
-  height: 200%;
+  height: 1920px;
   background: url(../img/section2_back.jpg);
   background-size: cover;
 }
@@ -128,8 +129,10 @@ body {
 }
 #section2 #header > .container {
   width: 100%;
+  height: 1880px;
   max-width: 1200px;
   margin: 2% auto;
+  overflow: hidden;
 }
 #section2 #header > .container .header-logoNav {
   width: 100%;
@@ -238,8 +241,8 @@ body {
 #section2 #header > .container #introduce div video {
   position: absolute;
   z-index: -1;
-  width: 336px;
-  height: 500px;
+  width: 100%;
+  height: 100%;
   filter: brightness(0.6);
   display: none;
   transition: 1s;
@@ -248,4 +251,65 @@ body {
 }
 #section2 #header > .container #introduce div video.active {
   display: block;
+}
+#section2 #header > .container .page-down {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition-duration: 0.8s;
+  margin: 0 auto;
+  position: relative;
+  bottom: -6%;
+}
+#section2 #header > .container .page-down .down-arrow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  bottom: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#section2 #header > .container .page-down .down-arrow .scroll-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+#section2 #header > .container .page-down .down-arrow img {
+  animation: downArrow 0.8s infinite alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+}
+@keyframes downArrow {
+  from {
+    transform: translateY(-25%);
+  }
+  to {
+    transform: translateY(25%);
+  }
+}
+#section2 #header > .container .page-down .down-arrow::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../img/icon/scroll-Circle1.png);
+  filter: invert(0%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: circleRotate 7s linear infinite;
+  background-position: center;
+  opacity: 0.7;
+}
+@keyframes circleRotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */

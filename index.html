@@ -36,20 +36,6 @@
                 </ul>
             </div>
         </section>
-        <script> // 550스크롤 도착시 영상 페이드
-            window.addEventListener('scroll', function() {
-              var videoContainer = document.querySelector('.m-video');
-              var mainVideo = document.getElementById('mainVideo');
-              var scrollY = window.scrollY
-          
-              if (scrollY >= 550) {
-                mainVideo.classList.add('dark-video');
-              } else {
-                mainVideo.classList.remove('dark-video');
-              }
-            });
-          </script>
-
 
         <!-- 섹션2 회사 소개 -->
         <section id="section2">
@@ -108,40 +94,20 @@
                             <source src="./video/introduce3.mp4" type="video/mp4">
                         </div>
                     </div>
-                    <script> // 마우스 호버시 동영상 보이게
-                        const introduceDivs = document.querySelectorAll("#introduce > div");
-
-                        introduceDivs.forEach((div) => {
-                          const video = div.querySelector("video");
-                        
-                          div.addEventListener("mouseenter", () => {
-                            video.classList.add("active");
-                          });
-                      
-                          div.addEventListener("mouseleave", () => {
-                            video.classList.remove("active");
-                          });
-                        });
-
-                        // 1500스크롤 도착시 #introduce opacity 변경
-                        window.addEventListener('scroll', function() {
-                          var introduce = document.getElementById('introduce'); // introduce 요소 선택
-                          var scrollPosition = window.scrollY; // 스크롤 위치 확인
-
-                          if (scrollPosition >= 1600) {
-                            introduce.style.opacity = 1; // opacity 값 변경
-                          } else {
-                            introduce.style.opacity = 0; // 기본 opacity 값으로 설정
-                          }
-                        });
-                    </script>
-                    
+                    <div class="page-down">
+                        <div class="down-arrow">
+                            <div class="scroll-text">more</div>
+                            <img src="./img/icon/scrolldown_arrow.png" alt="">
+                        </div>
+                    </div>
                 </div>  
             </header>
             <div>
             </div>
         </section>
-
+        <section id="section3">
+            이거 작성하면 어디에 나오려나 위치 아주 굳
+        </section>
     </main>
 </body>
 </html>
