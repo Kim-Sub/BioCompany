@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
 body {
   background: #222;
   color: #fff;
@@ -284,14 +285,14 @@ body {
   display: block;
 }
 #section2 #header > .container .page-down {
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   cursor: pointer;
   transition-duration: 0.8s;
   margin: 0 auto;
   position: relative;
-  bottom: -6%;
+  bottom: -9%;
 }
 #section2 #header > .container .page-down .down-arrow {
   position: relative;
@@ -306,9 +307,11 @@ body {
   font-size: 20px;
   font-weight: bold;
   margin-right: 20px;
+  padding-bottom: 30px;
 }
 #section2 #header > .container .page-down .down-arrow img {
   animation: downArrow 0.8s infinite alternate;
+  padding-bottom: 20px;
   animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
 }
 @keyframes downArrow {
@@ -388,6 +391,7 @@ body {
 #section3 div .contentBox .coverShape .cover {
   width: 100%;
   height: 100%;
+  position: relative;
   background-image: url("../img/derma1.jpg");
   transform: translateZ(-1500px);
   border-radius: 100px;
@@ -399,47 +403,57 @@ body {
   transform: translateZ(0px);
 }
 #section3 div .contentBox .coverShape .cover .imgbox {
+  width: 1000px;
+  height: 600px;
+  -webkit-clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%, 0 18%);
+          clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%, 0 18%);
+  box-sizing: content-box;
   position: relative;
+  top: 45%;
+  left: 10%;
+  transform: translateY(-50%);
 }
 #section3 div .contentBox .coverShape .cover .imgbox img {
-  -webkit-clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 0 25%);
-          clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 0 25%);
-  position: absolute; /* top: 50%; left: 10%; */
+  position: absolute; /* top: 50%; left: 0%; */
   top: 150%;
   left: 10%;
   transform: translateY(-50%);
   opacity: 0;
   transition: 1s;
 }
-#section3 div .contentBox .coverShape .cover p {
+#section3 div .contentBox .coverShape .cover .imgbox p {
   font-size: 50px;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 85%;
   transform: translate(-50%);
 }
-#section3 div .contentBox .coverShape .cover h2 {
+#section3 div .contentBox .coverShape .cover .imgbox h2 {
   font-size: 65px;
-  position: absolute; /* top: 25%; left: 30%; */
+  position: absolute; /* top: 16%; left: 32%; */
   top: 150%;
-  left: 30%;
+  left: 32%;
   opacity: 0;
   transition: 1s;
 }
-#section3 div .contentBox .coverShape .cover h4 {
+#section3 div .contentBox .coverShape .cover .imgbox h4 {
   font-size: 25px;
-  position: absolute; /*  top: 40%; left: 35%; */
+  font-weight: 200;
+  position: absolute;
+  font-family: "Nanum Gothic", sans-serif; /*  top: 40%; left: 35%; */
   top: 150%;
   left: 35%;
   width: 500px;
   opacity: 0;
   transition: 1s;
 }
-#section3 div .contentBox .coverShape .cover h4 span {
+#section3 div .contentBox .coverShape .cover .imgbox h4 span {
   display: block;
-  margin-top: 15%;
+  margin-top: 10%;
   margin-left: 80%;
   padding-left: 8px;
+  color: rgba(209, 148, 16, 0.6);
+  cursor: pointer;
   animation: colorchange 3s infinite;
 }
 @keyframes colorchange {
@@ -452,4 +466,34 @@ body {
   100% {
     filter: opacity(1);
   }
+}
+#section3 div .contentBox .coverShape .cover .imgbox.imgbox2 {
+  top: 100%;
+  left: 10%;
+  opacity: 0;
+}
+#section3 div .contentBox .coverShape .cover .imgbox.imgbox3 {
+  left: 250%;
+  opacity: 0;
+}
+#section3 div .contentBox .coverShape .cover .imgbox.imgbox3 img, #section3 div .contentBox .coverShape .cover .imgbox.imgbox3 h2, #section3 div .contentBox .coverShape .cover .imgbox.imgbox3 h4 {
+  position: absolute;
+  top: 10%;
+  left: 250%;
+}
+#section3 div .contentBox .coverShape .cover .nextPage {
+  height: 50px;
+  width: 200px;
+  background: red;
+  cursor: pointer;
+  transition-duration: 0.8s;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#section4 {
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */

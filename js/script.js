@@ -82,6 +82,7 @@ video.addEventListener('ended', handleVideoEnd);
 
 
 // 컨텐츠 박스 here 호버시 derma이미지 등장
+const imgbox = document.querySelector('.imgbox1'); 
 const imgboxP = document.querySelector('.imgbox p'); // 호버 활성화 버튼
 
 const imgboxh2 = document.querySelector('.imgbox h2');
@@ -89,16 +90,77 @@ const imgboxh4 = document.querySelector('.imgbox h4');
 const imgboxImg = document.querySelector('.imgbox img');
 
 imgboxP.addEventListener('mouseover', function() {
+  imgbox.style.border = '1px solid white'
   imgboxP.style.display = 'none'
+
   imgboxImg.style.top = '50%'
-  imgboxImg.style.left = '10%'
+  imgboxImg.style.left = '0%'
   imgboxImg.style.opacity = '1'
 
-  imgboxh2.style.top = '25%'
-  imgboxh2.style.left = '30%'
+  imgboxh2.style.top = '12%'
+  imgboxh2.style.left = '37%'
   imgboxh2.style.opacity = '1'
 
-  imgboxh4.style.top = '40%'
-  imgboxh4.style.left = '35%'
+  imgboxh4.style.top = '36%'
+  imgboxh4.style.left = '47%'
   imgboxh4.style.opacity = '1'
+});
+
+// 컨텐츠 박스 derma - 2번째
+const derma1span = document.querySelector('.imgbox1 span'); // 클릭 버튼
+const imgbox2 = document.querySelector('.imgbox2');
+
+const imgbox2h2 = document.querySelector('.imgbox2 h2');
+const imgbox2h4 = document.querySelector('.imgbox2 h4');
+const imgbox2Img = document.querySelector('.imgbox2 img');
+
+derma1span.addEventListener('click', function() {
+  imgbox.style.opacity = '.1'
+
+  imgbox2.style.border = '1px solid white'
+  imgbox2.style.top = '-8%'
+  imgbox2.style.left = '22%'
+  imgbox2.style.opacity = '1'
+
+  imgbox2Img.style.top = '50%'
+  imgbox2Img.style.left = '0%'
+  imgbox2Img.style.opacity = '1'
+
+  imgbox2h2.style.top = '12%'
+  imgbox2h2.style.left = '37%'
+  imgbox2h2.style.opacity = '1'
+
+  imgbox2h4.style.top = '49%'
+  imgbox2h4.style.left = '47%'
+  imgbox2h4.style.opacity = '1'
+});
+
+
+// 컨텐츠 박스 derma - 3번째
+const derma2span = document.querySelector('.imgbox2 span'); // 클릭 버튼
+const imgbox3 = document.querySelector('.imgbox3');
+
+const imgbox3h2 = document.querySelector('.imgbox3 h2');
+const imgbox3h4 = document.querySelector('.imgbox3 h4');
+const imgbox3Img = document.querySelector('.imgbox3 img');
+
+derma2span.addEventListener('click', function() {
+  imgbox2.style.opacity = '.1'
+
+  imgbox3.style.border = '1px solid white'
+  imgbox3.style.top = '-75%'
+  imgbox3.style.left = '38%'
+  imgbox3.style.opacity = '1'
+
+  imgbox3Img.style.top = '50%'
+  imgbox3Img.style.left = '0%'
+  imgbox3Img.style.opacity = '1'
+
+  imgbox3h2.style.top = '12%'
+  imgbox3h2.style.left = '37%'
+  imgbox3h2.style.opacity = '1'
+
+  imgbox3h4.style.top = '49%'
+  imgbox3h4.style.left = '47%'
+  imgbox3h4.style.opacity = '1'
 });
