@@ -212,8 +212,21 @@ body{background: $bg-color; color: $white-color; overflow-x: hidden; }
                         width: 100%; height: 100%; 
                         background-image: url("../img/derma1.jpg");
                         transform: translateZ(-1500px); border-radius: 100px; transition: .4s;
-                        
-                    &.add{height: 100%; border-radius: 0px; transform: translateZ(0px);  } }
+
+                        &.add{height: 100%; border-radius: 0px; transform: translateZ(0px);}
+                        .imgbox{
+                            position: relative;
+                            img{clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 0 25%);
+                                position: absolute; /* top: 50%; left: 10%; */ top: 150%; left: 10%; transform: translateY(-50%); opacity: 0; transition: 1s;}
+                            }
+                            p{font-size: 50px; position: absolute; top: 50%; left: 50%; transform: translate(-50%);}
+                            h2{
+                                font-size: 65px;position: absolute; /* top: 25%; left: 30%; */
+                                top: 150%; left: 30%; opacity: 0; transition: 1s;}
+                            h4{
+                                font-size: 25px;position: absolute; /*  top: 40%; left: 35%; */
+                                top: 150%; left: 35%; width: 500px; opacity: 0; transition: 1s;}
+                    }
                 }
             }
         }

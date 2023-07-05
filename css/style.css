@@ -397,4 +397,41 @@ body {
   height: 100%;
   border-radius: 0px;
   transform: translateZ(0px);
+}
+#section3 div .contentBox .coverShape .cover .imgbox {
+  position: relative;
+}
+#section3 div .contentBox .coverShape .cover .imgbox img {
+  -webkit-clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 0 25%);
+          clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 0 25%);
+  position: absolute; /* top: 50%; left: 10%; */
+  top: 150%;
+  left: 10%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 1s;
+}
+#section3 div .contentBox .coverShape .cover p {
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+#section3 div .contentBox .coverShape .cover h2 {
+  font-size: 65px;
+  position: absolute; /* top: 25%; left: 30%; */
+  top: 150%;
+  left: 30%;
+  opacity: 0;
+  transition: 1s;
+}
+#section3 div .contentBox .coverShape .cover h4 {
+  font-size: 25px;
+  position: absolute; /*  top: 40%; left: 35%; */
+  top: 150%;
+  left: 35%;
+  width: 500px;
+  opacity: 0;
+  transition: 1s;
 }/*# sourceMappingURL=style.css.map */

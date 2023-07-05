@@ -80,3 +80,25 @@ function handleVideoEnd() {
 video.addEventListener('ended', handleVideoEnd);
 
 
+
+// 컨텐츠 박스 here 호버시 derma이미지 등장
+const imgboxP = document.querySelector('.imgbox p'); // 호버 활성화 버튼
+
+const imgboxh2 = document.querySelector('.imgbox h2');
+const imgboxh4 = document.querySelector('.imgbox h4');
+const imgboxImg = document.querySelector('.imgbox img');
+
+imgboxP.addEventListener('mouseover', function() {
+  imgboxP.style.display = 'none'
+  imgboxImg.style.top = '50%'
+  imgboxImg.style.left = '10%'
+  imgboxImg.style.opacity = '1'
+
+  imgboxh2.style.top = '25%'
+  imgboxh2.style.left = '30%'
+  imgboxh2.style.opacity = '1'
+
+  imgboxh4.style.top = '40%'
+  imgboxh4.style.left = '35%'
+  imgboxh4.style.opacity = '1'
+});
