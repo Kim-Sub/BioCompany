@@ -74,7 +74,8 @@ body {
   color: #fff;
   font-weight: 900;
   font-size: 160px;
-  letter-spacing: -10px;
+  letter-spacing: -20px;
+  white-space: pre;
   font-family: "IBM Plex Sans KR", sans-serif;
   mix-blend-mode: multiply;
   -webkit-user-select: none;

@@ -58,7 +58,7 @@ body{background: $bg-color; color: $white-color; overflow-x: hidden; }
             }
             #videoText{ // 비디오 위 텍스트 필터
                 position: absolute; inset: 0; display: grid; place-items: center; 
-                background-color: black; color: #fff; font-weight: 900; font-size: 160px; letter-spacing: -10px;
+                background-color: black; color: #fff; font-weight: 900; font-size: 160px; letter-spacing: -20px; white-space: pre;
                 font-family: 'IBM Plex Sans KR', sans-serif;
                 mix-blend-mode: multiply; user-select: none;
 
