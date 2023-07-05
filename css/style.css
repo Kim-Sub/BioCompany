@@ -434,4 +434,22 @@ body {
   width: 500px;
   opacity: 0;
   transition: 1s;
+}
+#section3 div .contentBox .coverShape .cover h4 span {
+  display: block;
+  margin-top: 15%;
+  margin-left: 80%;
+  padding-left: 8px;
+  animation: colorchange 3s infinite;
+}
+@keyframes colorchange {
+  0% {
+    filter: opacity(1);
+  }
+  50% {
+    filter: opacity(0.2);
+  }
+  100% {
+    filter: opacity(1);
+  }
 }/*# sourceMappingURL=style.css.map */

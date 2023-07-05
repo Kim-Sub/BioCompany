@@ -180,8 +180,7 @@ body{background: $bg-color; color: $white-color; overflow-x: hidden; }
                         animation: circleRotate 7s linear infinite;
                         @keyframes circleRotate {
                             0% {transform: translate(-50%, -50%) rotate(0)}
-                            100% {transform: translate(-50%, -50%) rotate(360deg)
-                            }
+                            100% {transform: translate(-50%, -50%) rotate(360deg)}
                         }
                     }
                 }
@@ -225,7 +224,16 @@ body{background: $bg-color; color: $white-color; overflow-x: hidden; }
                                 top: 150%; left: 30%; opacity: 0; transition: 1s;}
                             h4{
                                 font-size: 25px;position: absolute; /*  top: 40%; left: 35%; */
-                                top: 150%; left: 35%; width: 500px; opacity: 0; transition: 1s;}
+                                top: 150%; left: 35%; width: 500px; opacity: 0; transition: 1s;
+                                span{display: block; margin-top: 15%; margin-left: 80%; padding-left: 8px;
+                                    animation: colorchange 3s infinite;
+                                    @keyframes colorchange {
+                                        0% {filter: opacity(1);}
+                                        50% {filter: opacity(0.2); }
+                                        100% {filter: opacity(1);}
+                                    }
+                                }
+                            }
                     }
                 }
             }
