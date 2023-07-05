@@ -64,7 +64,7 @@ pageDown.addEventListener('click', function() {
 });
 
 
-// ★ 섹션3
+// ★ 섹션 3
 // 비디오 종료시 비디오 display:none + 컨텐츠 박스 확대
 var videoBox = document.querySelector('#section3 .videoBox');
 var video = videoBox.querySelector('.videoPlayer');
@@ -164,3 +164,16 @@ derma2span.addEventListener('click', function() {
   imgbox3h4.style.left = '47%'
   imgbox3h4.style.opacity = '1'
 });
+
+
+// nextPage 버튼 누르면 섹션4 등장
+const nextPage = document.querySelector('.nextPage');
+const section4 = document.getElementById('section4');
+
+nextPage.addEventListener('click', function() {
+  section4.style.display = 'block';
+  section4.scrollIntoView({ behavior: 'smooth' });
+});
+
+
+// ★ 섹션 4
