@@ -12,7 +12,7 @@ window.addEventListener('scroll', function() {
     }
   });
 
-
+  
 // ★ 섹션 2
 // 마우스 호버시 동영상 보이게
 const introduceDivs = document.querySelectorAll("#introduce > div");

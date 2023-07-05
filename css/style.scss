@@ -42,14 +42,12 @@ body{background: $bg-color; color: $white-color; overflow-x: hidden; }
 
 // 헤더
 
-
-
 #main{width: 100%; height: 100%}
 // 섹션1
 #section1{width: 100%; height: 100%;
     >div{position: relative; width: 100%; height: 100%;
-        .m-video{position: relative; 
-            width: 100%; height: 100%; overflow: hidden; z-index: -1;
+        .main{position: relative; 
+            width: 100%; height: 100%; z-index: -1;
             #mainVideo{
                 width: 100%; height: 100%; object-fit: cover;
                 filter: brightness(100%);
@@ -57,6 +55,19 @@ body{background: $bg-color; color: $white-color; overflow-x: hidden; }
                  &.dark-video {
                     filter: brightness(50%); 
                   } 
+            }
+            #videoText{ // 비디오 위 텍스트 필터
+                position: absolute; inset: 0; display: grid; place-items: center; 
+                background-color: black; color: #fff; font-weight: 900; font-size: 160px; letter-spacing: -10px;
+                font-family: 'IBM Plex Sans KR', sans-serif;
+                mix-blend-mode: multiply; user-select: none;
+
+                animation: mainFade  6s forwards; animation-iteration-count: 1; 
+                @keyframes mainFade {
+                    0% {opacity: 1;}
+                    30% {opacity: 1;}
+                    100% {opacity: 0;}
+                }
             }
         }
     }
@@ -197,7 +208,11 @@ body{background: $bg-color; color: $white-color; overflow-x: hidden; }
                 .coverShape{
                     position: absolute; top: 50%; left: 50%;
                     transform: translate(-50%, -50%); perspective: 100px;
-                    .cover{width: 100%; height: 100%; background: url(../img/section2_back.jpg) no-repeat center center;  transform: translateZ(-1500px); border-radius: 100px; transition: .4s;
+                    .cover{
+                        width: 100%; height: 100%; 
+                        background-image: url("../img/derma1.jpg");
+                        transform: translateZ(-1500px); border-radius: 100px; transition: .4s;
+                        
                     &.add{height: 100%; border-radius: 0px; transform: translateZ(0px);  } }
                 }
             }

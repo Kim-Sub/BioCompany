@@ -48,14 +48,13 @@ body {
   width: 100%;
   height: 100%;
 }
-#section1 > div .m-video {
+#section1 > div .main {
   position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   z-index: -1;
 }
-#section1 > div .m-video #mainVideo {
+#section1 > div .main #mainVideo {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -63,8 +62,37 @@ body {
   filter: brightness(100%);
   transition: filter 0.5s ease;
 }
-#section1 > div .m-video #mainVideo.dark-video {
+#section1 > div .main #mainVideo.dark-video {
   filter: brightness(50%);
+}
+#section1 > div .main #videoText {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background-color: black;
+  color: #fff;
+  font-weight: 900;
+  font-size: 160px;
+  letter-spacing: -10px;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  mix-blend-mode: multiply;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  animation: mainFade 6s forwards;
+  animation-iteration-count: 1;
+}
+@keyframes mainFade {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 #section1 .scroll-down {
   position: absolute;
@@ -359,7 +387,7 @@ body {
 #section3 div .contentBox .coverShape .cover {
   width: 100%;
   height: 100%;
-  background: url(../img/section2_back.jpg) no-repeat center center;
+  background-image: url("../img/derma1.jpg");
   transform: translateZ(-1500px);
   border-radius: 100px;
   transition: 0.4s;
