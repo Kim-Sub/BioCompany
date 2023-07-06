@@ -1,0 +1,500 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+body {
+  background: #222;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ★ y축(세로) 스크롤바 커스텀 */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track:vertical {
+  background: -webkit-linear-gradient(180deg, #fff, #fff, #fff, rgba(34, 83, 34, 0.7411764706), rgba(34, 83, 34, 0.7411764706), rgba(34, 83, 34, 0.7411764706), #fff, #fff, #fff);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(209, 148, 16, 0.6);
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-button:vertical:single-button:start {
+  border-bottom: 50px solid rgba(34, 83, 34, 0.7411764706);
+  border-top: 50px solid rgba(34, 83, 34, 0.7411764706);
+  border-right: 50px solid #222;
+  border-left: 50px solid #222;
+}
+
+::-webkit-scrollbar-button:vertical:single-button:end {
+  border-bottom: 50px solid rgba(34, 83, 34, 0.7411764706);
+  border-top: 50px solid rgba(34, 83, 34, 0.7411764706);
+  border-right: 50px solid #222;
+  border-left: 50px solid #222;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+}
+
+#section1 {
+  width: 100%;
+  height: 100%;
+}
+#section1 > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#section1 > div .main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#section1 > div .main #mainVideo {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(100%);
+  transition: filter 0.5s ease;
+}
+#section1 > div .main #mainVideo.dark-video {
+  filter: brightness(50%);
+}
+#section1 > div .main #videoText {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background-color: black;
+  color: #fff;
+  font-weight: 900;
+  font-size: 160px;
+  letter-spacing: -20px;
+  white-space: pre;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  mix-blend-mode: multiply;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  animation: mainFade 6s forwards;
+  animation-iteration-count: 1;
+}
+@keyframes mainFade {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#section1 .scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 46px;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+#section1 .scroll-down li {
+  transform: rotate(90deg);
+  font-family: " ";
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+}
+#section1 .scroll-down li::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -2px;
+  width: 100px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+}
+#section1 .scroll-down li::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -2px;
+  width: 50px;
+  height: 4px;
+  background: #ffffff;
+  animation: scroll-down infinite alternate linear;
+  animation-duration: 1s;
+}
+@keyframes scroll-down {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(50px);
+  }
+}
+#section1 .scroll-down li p {
+  padding-bottom: 5px;
+}
+
+#section2 {
+  width: 100%;
+  height: 1920px;
+  background: url(../img/section2_back.jpg);
+  background-size: cover;
+}
+#section2 #header {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0);
+  z-index: 3;
+}
+#section2 #header > .container {
+  width: 100%;
+  height: 1880px;
+  max-width: 1200px;
+  margin: 2% auto;
+  overflow: hidden;
+}
+#section2 #header > .container .shell-height {
+  height: 60px;
+}
+#section2 #header > .container .shell-height .header-logoNav {
+  width: 100%;
+  z-index: 6;
+  top: 3%;
+  left: 0%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#section2 #header > .container .shell-height .header-logoNav h1 a img { /* 로고이미지 */
+  filter: invert(1%);
+}
+#section2 #header > .container .shell-height .header-logoNav nav span {
+  display: inline-block;
+  margin-left: 20px;
+}
+#section2 #header > .container .shell-height .header-logoNav nav span a {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+  transition: 0.3s;
+}
+#section2 #header > .container .shell-height .header-logoNav nav span a:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+#section2 #header > .container .videobox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 1000px;
+}
+#section2 #header > .container .videobox .type {
+  height: 50px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+#section2 #header > .container .videobox .typed-cursor {
+  display: none;
+}
+#section2 #header > .container .textbox {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  z-index: 1;
+}
+#section2 #header > .container .textbox p {
+  font-size: 140px;
+  font-style: italic;
+  font-weight: 1500;
+  letter-spacing: -17px;
+  opacity: 0.6;
+  color: rgba(34, 83, 34, 0.7411764706);
+  color: transparent;
+  animation: colorFade 5s forwards;
+  animation-play-state: paused;
+}
+@keyframes colorFade {
+  from {
+    color: rgba(34, 83, 34, 0.7411764706);
+  }
+  to {
+    color: white;
+  }
+}
+#section2 #header > .container .textbox p:hover {
+  animation-play-state: running;
+}
+#section2 #header > .container .textbox2 {
+  top: 105%;
+  left: 45%;
+}
+#section2 #header > .container #introduce {
+  display: flex;
+  justify-content: space-around;
+  opacity: 0;
+  transition: 2s;
+}
+#section2 #header > .container #introduce div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 28%;
+  height: 500px;
+  padding: 2%;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  font-size: 15px;
+  transition: 2s;
+  position: relative;
+}
+#section2 #header > .container #introduce div h3 {
+  font-size: 30px;
+}
+#section2 #header > .container #introduce div i {
+  font-size: 30px;
+  margin: 55px 0;
+}
+#section2 #header > .container #introduce div video {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.6);
+  display: none;
+  transition: 1s;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#section2 #header > .container #introduce div video.active {
+  display: block;
+}
+#section2 #header > .container .page-down {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition-duration: 0.8s;
+  margin: 0 auto;
+  position: relative;
+  bottom: -9%;
+}
+#section2 #header > .container .page-down .down-arrow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  bottom: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#section2 #header > .container .page-down .down-arrow .scroll-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 20px;
+  padding-bottom: 30px;
+}
+#section2 #header > .container .page-down .down-arrow img {
+  animation: downArrow 0.8s infinite alternate;
+  padding-bottom: 20px;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+}
+@keyframes downArrow {
+  from {
+    transform: translateY(-25%);
+  }
+  to {
+    transform: translateY(25%);
+  }
+}
+#section2 #header > .container .page-down .down-arrow::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../img/icon/scroll-Circle1.png) center/cover;
+  opacity: 0.7;
+  animation: circleRotate 7s linear infinite;
+}
+@keyframes circleRotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.header-logoNav.sticky-fixed {
+  position: fixed;
+  top: 108%;
+  left: 18.7% !important;
+  max-width: 1200px;
+}
+
+#section3 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: none;
+}
+#section3 div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#section3 div .videoBox {
+  opacity: 1;
+  transition: 3s;
+}
+#section3 div .videoBox.hidden {
+  opacity: 0;
+}
+#section3 div .videoBox video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+}
+#section3 div .contentBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#section3 div .contentBox .coverShape {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 100px;
+}
+#section3 div .contentBox .coverShape .cover {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url("../img/derma1.jpg");
+  transform: translateZ(-1500px);
+  border-radius: 100px;
+  transition: 0.4s;
+}
+#section3 div .contentBox .coverShape .cover.add {
+  height: 100%;
+  border-radius: 0px;
+  transform: translateZ(0px);
+}
+#section3 div .contentBox .coverShape .cover .imgbox {
+  width: 1000px;
+  height: 600px;
+  -webkit-clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%, 0 18%);
+          clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%, 0 18%);
+  box-sizing: content-box;
+  position: relative;
+  top: 45%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+#section3 div .contentBox .coverShape .cover .imgbox img {
+  position: absolute; /* top: 50%; left: 0%; */
+  top: 150%;
+  left: 10%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 1s;
+}
+#section3 div .contentBox .coverShape .cover .imgbox p {
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 85%;
+  transform: translate(-50%);
+}
+#section3 div .contentBox .coverShape .cover .imgbox h2 {
+  font-size: 65px;
+  position: absolute; /* top: 16%; left: 32%; */
+  top: 150%;
+  left: 32%;
+  opacity: 0;
+  transition: 1s;
+}
+#section3 div .contentBox .coverShape .cover .imgbox h4 {
+  font-size: 25px;
+  font-weight: 200;
+  position: absolute;
+  font-family: "Nanum Gothic", sans-serif; /*  top: 40%; left: 35%; */
+  top: 150%;
+  left: 35%;
+  width: 500px;
+  opacity: 0;
+  transition: 1s;
+}
+#section3 div .contentBox .coverShape .cover .imgbox h4 span {
+  display: block;
+  margin-top: 10%;
+  margin-left: 80%;
+  padding-left: 8px;
+  color: rgba(209, 148, 16, 0.6);
+  cursor: pointer;
+  animation: colorchange 3s infinite;
+}
+@keyframes colorchange {
+  0% {
+    filter: opacity(1);
+  }
+  50% {
+    filter: opacity(0.2);
+  }
+  100% {
+    filter: opacity(1);
+  }
+}
+#section3 div .contentBox .coverShape .cover .imgbox.imgbox2 {
+  top: 100%;
+  left: 10%;
+  opacity: 0;
+}
+#section3 div .contentBox .coverShape .cover .imgbox.imgbox3 {
+  left: 250%;
+  opacity: 0;
+}
+#section3 div .contentBox .coverShape .cover .imgbox.imgbox3 img, #section3 div .contentBox .coverShape .cover .imgbox.imgbox3 h2, #section3 div .contentBox .coverShape .cover .imgbox.imgbox3 h4 {
+  position: absolute;
+  top: 10%;
+  left: 250%;
+}
+#section3 div .contentBox .coverShape .cover .nextPage {
+  height: 50px;
+  width: 200px;
+  background: red;
+  cursor: pointer;
+  transition-duration: 0.8s;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#section4 {
+  height: 100%;
+  display: none;
+}/*# sourceMappingURL=style.css.map */
