@@ -72,16 +72,16 @@ body {
   display: grid;
   place-items: center;
   background-color: black;
+  mix-blend-mode: multiply;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   color: #fff;
   font-weight: 900;
   font-size: 160px;
   letter-spacing: -20px;
   white-space: pre;
   font-family: "IBM Plex Sans KR", sans-serif;
-  mix-blend-mode: multiply;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
   animation: mainFade 6s forwards;
   animation-iteration-count: 1;
 }
@@ -402,6 +402,42 @@ body {
   border-radius: 0px;
   transform: translateZ(0px);
 }
+#section3 div .contentBox .coverShape .cover .mtext {
+  position: absolute;
+  left: 11%;
+  height: 120%;
+  width: 100px;
+  overflow: hidden;
+}
+#section3 div .contentBox .coverShape .cover .mtext p {
+  height: 1500px;
+  animation: flow_font 12s linear infinite;
+  font-size: 90px;
+  color: white;
+  writing-mode: vertical-lr;
+  opacity: 0.5;
+  font-weight: 700;
+}
+@keyframes flow_font {
+  from {
+    transform: translateY(-20%);
+  }
+  to {
+    transform: translateY(80%);
+  }
+}
+#section3 div .contentBox .coverShape .cover .mtext2 {
+  left: 13%;
+  width: 110px;
+}
+#section3 div .contentBox .coverShape .cover .mtext2 p {
+  font-size: 100px;
+  height: 1300px;
+  color: rgba(34, 83, 34, 0.7411764706);
+  opacity: 0.8;
+  font-weight: 900;
+  animation: flow_font 20s linear infinite;
+}
 #section3 div .contentBox .coverShape .cover .imgbox {
   width: 1000px;
   height: 600px;
@@ -425,8 +461,10 @@ body {
   font-size: 50px;
   position: absolute;
   top: 50%;
-  left: 85%;
-  transform: translate(-50%);
+  left: 80%;
+  transform: translateX(-50%);
+  border: 4px solid white;
+  padding: 0 30px;
 }
 #section3 div .contentBox .coverShape .cover .imgbox h2 {
   font-size: 65px;
