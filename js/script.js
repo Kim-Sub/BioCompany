@@ -1,16 +1,49 @@
+// 현재 스크롤 높이를 알 수 있는 console
+window.addEventListener('scroll', function() {
+  console.log(window.scrollY);
+});
+
 // ★ 섹션 1
 // 550 스크롤 도착시 메인1 동영상 페이드
+// 각각 스크롤 도착시 textbox1, textbox2, textbox3 등장
 window.addEventListener('scroll', function() {
-    var videoContainer = document.querySelector('.m-video');
     var mainVideo = document.getElementById('mainVideo');
-    var scrollY = window.scrollY
+
+    var section3 = document.getElementById('section3');
+    var scrollY = window.scrollY ;
+    var textbox1 = document.querySelector('.textbox1');
+    var textbox2 = document.querySelector('.textbox2');
+    var textbox3 = document.querySelector('.textbox3');
 
     if (scrollY >= 550) {
       mainVideo.classList.add('dark-video');
     } else {
       mainVideo.classList.remove('dark-video');
     }
+    if (scrollY >= 3570) {
+      section3.classList.add('dark');
+    } else {
+      section3.classList.remove('dark');
+    }
+
+
+    if (scrollY >= 500) { // OUR PASSION
+      textbox1.style.left = '15%';
+    }
+    if (scrollY >= 1400) { // WE  ARE  NBBIO
+      textbox2.style.right = '18%';
+    }
+    if (scrollY >= 3880) { // Pure Genetic Crude
+      textbox3.style.left = '15%';
+    }
+
+
+
+
   });
+
+
+
 
   
 // ★ 섹션 2
@@ -166,14 +199,32 @@ derma2span.addEventListener('click', function() {
 });
 
 
-// nextPage 버튼 누르면 섹션4 등장
+// nextPage 버튼 누르면 섹션4 + footer 등장
 const nextPage = document.querySelector('.nextPage');
 const section4 = document.getElementById('section4');
+const footer = document.getElementById('footer');
 
 nextPage.addEventListener('click', function() {
   section4.style.display = 'block';
+  footer.style.display = 'block'
   section4.scrollIntoView({ behavior: 'smooth' });
 });
 
 
 // ★ 섹션 4
+// 이벤트 높이 3600 픽셀
+window.addEventListener('scroll', function() {
+  var scrollY = window.scrollY ;
+  var sidePhoto = document.querySelector('.sidePhoto');
+  var slider = document.querySelector('.slider');
+
+  if (scrollY >= 3450) {  // 사이드 사진 
+    sidePhoto.style.top = '50%';
+  }
+  if (scrollY >= 3750) {  //  WEEKLY PRODUCT 슬라이더
+    slider.style.right = '-61%'
+  }
+
+});
+
+// WEEKLY PRODUCT 슬라이더

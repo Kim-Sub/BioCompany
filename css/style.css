@@ -7,6 +7,55 @@ body {
   overflow-x: hidden;
 }
 
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.textbox {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  position: absolute;
+  transition: 0.8s;
+}
+.textbox p {
+  font-size: 140px;
+  font-style: italic;
+  font-weight: 1500;
+  letter-spacing: -17px;
+  opacity: 0.6;
+  color: rgba(34, 83, 34, 0.7411764706);
+  color: transparent;
+  animation: colorFade 5s forwards;
+  animation-play-state: paused;
+}
+@keyframes colorFade {
+  from {
+    color: rgba(34, 83, 34, 0.7411764706);
+  }
+  to {
+    color: white;
+  }
+}
+.textbox p:hover {
+  animation-play-state: running;
+}
+
+.dark {
+  filter: brightness(50%);
+}
+
 /* ★ y축(세로) 스크롤바 커스텀 */
 ::-webkit-scrollbar {
   width: 10px;
@@ -186,7 +235,7 @@ body {
 #section2 #header > .container .shell-height .header-logoNav nav span a {
   color: #fff;
   display: block;
-  font-size: 18px;
+  font-size: 19px;
   border-bottom: 1px solid rgba(255, 255, 255, 0);
   transition: 0.3s;
 }
@@ -208,40 +257,13 @@ body {
 #section2 #header > .container .videobox .typed-cursor {
   display: none;
 }
-#section2 #header > .container .textbox {
-  font-family: "IBM Plex Sans KR", sans-serif;
-  font-size: 50px;
-  font-weight: 600;
-  position: absolute;
+#section2 #header > .container .textbox1 {
   top: 20%;
-  left: 15%;
-  z-index: 1;
-}
-#section2 #header > .container .textbox p {
-  font-size: 140px;
-  font-style: italic;
-  font-weight: 1500;
-  letter-spacing: -17px;
-  opacity: 0.6;
-  color: rgba(34, 83, 34, 0.7411764706);
-  color: transparent;
-  animation: colorFade 5s forwards;
-  animation-play-state: paused;
-}
-@keyframes colorFade {
-  from {
-    color: rgba(34, 83, 34, 0.7411764706);
-  }
-  to {
-    color: white;
-  }
-}
-#section2 #header > .container .textbox p:hover {
-  animation-play-state: running;
+  left: -100%;
 }
 #section2 #header > .container .textbox2 {
   top: 105%;
-  left: 45%;
+  right: -100%;
 }
 #section2 #header > .container #introduce {
   display: flex;
@@ -352,10 +374,12 @@ body {
 }
 
 #section3 {
+  display: block;
+  overflow: hidden;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  display: none;
+  transition: 0.5s;
 }
 #section3 div {
   width: 100%;
@@ -392,7 +416,7 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  background-image: url("../img/derma1.jpg");
+  background-image: url("../img/derma.jpg");
   transform: translateZ(-1500px);
   border-radius: 100px;
   transition: 0.4s;
@@ -448,6 +472,7 @@ body {
   top: 45%;
   left: 10%;
   transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.2);
 }
 #section3 div .contentBox .coverShape .cover .imgbox img {
   position: absolute; /* top: 50%; left: 0%; */
@@ -478,6 +503,7 @@ body {
   font-size: 25px;
   font-weight: 200;
   position: absolute;
+  line-height: 1.7;
   font-family: "Nanum Gothic", sans-serif; /*  top: 40%; left: 35%; */
   top: 150%;
   left: 35%;
@@ -487,10 +513,12 @@ body {
 }
 #section3 div .contentBox .coverShape .cover .imgbox h4 span {
   display: block;
-  margin-top: 10%;
+  margin-top: 8%;
   margin-left: 80%;
   padding-left: 8px;
-  color: rgba(209, 148, 16, 0.6);
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
   cursor: pointer;
   animation: colorchange 3s infinite;
 }
@@ -499,7 +527,7 @@ body {
     filter: opacity(1);
   }
   50% {
-    filter: opacity(0.2);
+    filter: opacity(0.7);
   }
   100% {
     filter: opacity(1);
@@ -522,17 +550,161 @@ body {
 #section3 div .contentBox .coverShape .cover .nextPage {
   height: 50px;
   width: 200px;
-  background: red;
-  cursor: pointer;
-  transition-duration: 0.8s;
   margin: 0 auto;
+  margin-bottom: 30px;
+  cursor: pointer;
+  font-size: 40px;
+  text-align: center;
   position: absolute;
   bottom: 0%;
-  left: 50%;
+  left: 45%;
   transform: translateX(-50%);
+  animation: scale 3s infinite;
+}
+@keyframes scale {
+  0% {
+    transform: scale(0.8);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(0.8);
+  }
 }
 
 #section4 {
+  display: block;
+  position: relative;
   height: 100%;
-  display: none;
+  width: 100%;
+  overflow: hidden;
+  background: url(../img/product2.jpg) center center;
+  background-size: cover;
+}
+#section4 .sidePhoto {
+  position: absolute;
+  top: 150%;
+  left: 5%;
+  transform: translateY(-50%);
+  height: 80%;
+  transition: 0.8s;
+  box-shadow: 3px 3px 15px 10px rgba(0, 0, 0, 0.3);
+}
+#section4 .sidePhoto img {
+  height: 100%;
+}
+#section4 > h2 {
+  position: absolute;
+  font-size: 65px;
+  top: 20%;
+  left: 26%;
+}
+#section4 .slider {
+  position: absolute;
+  top: 30%;
+  right: -150%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 55%;
+  transition: 1s;
+  background: rgba(0, 0, 0, 0.3);
+}
+#section4 .slider .slider-inner {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 1%;
+}
+#section4 .slider .slider-inner li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 300px;
+  margin-right: 0.5%;
+  text-align: center;
+}
+#section4 .slider .slider-inner li > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#section4 .slider .slider-inner li > h1 {
+  flex: 1;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 3%;
+}
+#section4 .slider .slider-inner li > h2 {
+  flex: 2;
+  margin-top: 2%;
+  font-size: 14px;
+}
+#section4 .slider .slider-inner li > h3 {
+  flex: 1;
+  font-size: 14px;
+}
+
+#footer {
+  display: block;
+  height: 40%;
+  width: 100%;
+  background: rgba(51, 68, 51, 0.4588235294);
+  position: relative;
+}
+#footer .textbox3 {
+  top: -30%;
+  left: -100%;
+  z-index: 10;
+}
+#footer > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+#footer > .container > .footerMenu {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10%;
+}
+#footer > .container > .footerMenu li {
+  flex-basis: 28%;
+  display: flex;
+  align-items: center;
+}
+#footer > .container > .footerMenu li .iconBox {
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  border: 1px solid whit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer > .container > .footerMenu li .iconBox i {
+  font-size: 50px;
+}
+#footer > .container > .footerMenu li div {
+  margin-left: 5%;
+}
+#footer > .container > .footerMenu li div h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+#footer > .container > .footerMenu li div h3 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+#footer > .container > p {
+  text-align: center;
+  margin-bottom: 4%;
+  font-weight: bold;
+  box-sizing: border-box;
 }/*# sourceMappingURL=style.css.map */
