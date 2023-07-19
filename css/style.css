@@ -600,7 +600,7 @@ img {
   top: 20%;
   left: 26%;
 }
-#section4 .slider {
+#section4 .swiper-container {
   position: absolute;
   top: 30%;
   right: -150%;
@@ -609,17 +609,17 @@ img {
   height: 55%;
   transition: 1s;
   background: rgba(0, 0, 0, 0.3);
+  overflow-x: hidden;
 }
-#section4 .slider .slider-inner {
+#section4 .swiper-container .swiper-wrapper {
   display: flex;
   width: -moz-fit-content;
   width: fit-content;
   transition: transform 0.3s ease-in-out;
-  overflow: hidden;
   box-sizing: border-box;
   padding: 1%;
 }
-#section4 .slider .slider-inner li {
+#section4 .swiper-container .swiper-wrapper li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -628,23 +628,20 @@ img {
   margin-right: 0.5%;
   text-align: center;
 }
-#section4 .slider .slider-inner li > img {
+#section4 .swiper-container .swiper-wrapper li > img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-#section4 .slider .slider-inner li > h1 {
-  flex: 1;
+#section4 .swiper-container .swiper-wrapper li > h1 {
   font-size: 18px;
   font-weight: bold;
   margin-top: 3%;
 }
-#section4 .slider .slider-inner li > h2 {
-  flex: 2;
+#section4 .swiper-container .swiper-wrapper li > h2 {
   margin-top: 2%;
   font-size: 14px;
 }
-#section4 .slider .slider-inner li > h3 {
-  flex: 1;
+#section4 .swiper-container .swiper-wrapper li > h3 {
   font-size: 14px;
 }
 
@@ -675,6 +672,7 @@ img {
   flex-basis: 28%;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 #footer > .container > .footerMenu li .iconBox {
   width: 100px;
@@ -682,12 +680,14 @@ img {
   background: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   border: 1px solid whit;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #footer > .container > .footerMenu li .iconBox i {
-  font-size: 50px;
+  font-size: 40px;
+  transition: 0.3s ease-in-out;
 }
 #footer > .container > .footerMenu li div {
   margin-left: 5%;
@@ -701,6 +701,10 @@ img {
   text-align: center;
   margin-top: 10px;
   font-size: 14px;
+}
+#footer > .container > .footerMenu li:hover > p > i {
+  color: #e9c050;
+  font-size: 50px;
 }
 #footer > .container > p {
   text-align: center;

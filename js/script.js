@@ -216,7 +216,7 @@ nextPage.addEventListener('click', function() {
 window.addEventListener('scroll', function() {
   var scrollY = window.scrollY ;
   var sidePhoto = document.querySelector('.sidePhoto');
-  var slider = document.querySelector('.slider');
+  var slider = document.querySelector('.swiper-container');
 
   if (scrollY >= 3450) {  // 사이드 사진 
     sidePhoto.style.top = '50%';
@@ -228,3 +228,36 @@ window.addEventListener('scroll', function() {
 });
 
 // WEEKLY PRODUCT 슬라이더
+
+
+
+
+// ★ 푸터
+// 오시는길 클릭시 구글 지도 열람
+const openMap = document.getElementById('openMap');
+const goEmail = document.getElementById('goEmail');
+
+
+// 수정 중
+// 수정 중
+// 수정 중
+// 수정 중
+goEmail.addEventListener('click', () => { // 메일 보내기
+    const emailAddress = 'powersub1101@naver.com';
+    const subject = 'Hello';
+    const body = 'Hi, this is the email body.';
+
+    const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Create a hidden anchor element and simulate a click to open the email client.
+    const emailLink = document.createElement('a');
+    emailLink.href = mailtoLink;
+    emailLink.style.display = 'none';
+    document.body.appendChild(emailLink);
+    emailLink.click();
+    document.body.removeChild(emailLink);
+});
+
+openMap.addEventListener('click', () => { // 오시는 길
+    window.open('./page/popUpMap.html', '_blank', 'width=610, height=460');
+});
