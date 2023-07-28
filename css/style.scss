@@ -24,7 +24,7 @@ img{object-fit: cover;}
     p{
         font-size: 140px; font-style: italic; font-weight: 1500; letter-spacing: -17px;
         opacity: .6; color: $bio-green;
-        color: transparent; animation: colorFade 5s forwards; animation-play-state: paused; 
+        animation: colorFade 5s forwards; animation-play-state: paused; 
         @keyframes colorFade {
             from {color: $bio-green;}
             to {color: white;}}
@@ -210,7 +210,7 @@ img{object-fit: cover;}
 // 센션3
 #section3{ display: block;
     overflow: hidden;
-    width: 100%; height: 100%; overflow: hidden; transition: .5s;
+    width: 100%; height: 100%; transition: .5s;
         div{width: 100%; height: 100%; position: relative;
             .videoBox{ 
                 opacity: 1; transition: 3s;
